@@ -1,17 +1,15 @@
 package com.example.myflighttrackerapp
 
-
-
 data class FlightResponse(
-    val data: List<FlightData>
+    val data: List<FlightData>?
 )
 
 data class FlightData(
-    val flight: FLightInfo,
+    val flight: FlightInfo,
     val live: LiveData?
 )
 
-data class FLightInfo(
+data class FlightInfo(
     val iata: String
 )
 
