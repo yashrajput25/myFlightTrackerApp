@@ -4,8 +4,8 @@ import retrofit2.http.Query
 
 interface FlightApiServiceInterface{
     @GET("flights")
-    fun getFlightData(
+    suspend fun getFlightData(
         @Query("access_key") apiKey: String,
-        @Query("flight_Data") flightNumber: String
+        @Query("flight_iata") flightNumber: String
     ): FlightResponse
 }
